@@ -6,7 +6,6 @@
 
 #define L_FN 1
 #define L_MOD 2
-#define L1 3
 
 / {
     behaviors {
@@ -29,19 +28,19 @@
     default_layer {
       bindings = <
         &none     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5 &kp N6                                                                       &mo L_MOD &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &none
-        &none     &kp Q     &kp W     &kp E     &kp R     &kp T  &kp TAB                                                                      &kp PLUS  &kp Y     &kp U     &kp I     &kp O    &kp P    &none
+        &none     &kp Q     &kp W     &kp E     &kp R     &kp T  &kp TAB                                                                      &kp EQUAL &kp Y     &kp U     &kp I     &kp O    &kp P    &none
         &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G  &kp GRAVE            &kp LCTRL   &kp LALT  &kp LGUI  &kp RCTRL               &kp MINUS &kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                                   &kp HOME  &kp END                                     &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp PIPE
-        &mo L_FN  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT                   &kp BSPC  &lt L1 DEL  &mo L1    &mo L1    &kp ENTER    &kp SPACE                      &kp MINUS &kp PLUS  &kp LBKT &kp RBKT &kp BSLH
+        &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                                   &kp HOME  &kp END                                     &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &kp BSLH
+        &mo L_FN  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT                 &kp BSPC  &lt L_FN DEL  &mo L_FN  &mo L_FN  &kp ENTER    &kp SPACE                      &kp MINUS &kp PLUS  &kp LBKT &kp RBKT &kp BSLH
       >;
     };
     fn {
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+        &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6     &none                                                              &mo 3     &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+        &none     &none     &none     &none     &none     &none      &none                                                              &none     &none     &none     &none     &none     &none     &none
+        &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp GRAVE  &none              &trans    &trans    &trans    &trans            &none     &kp BSLH  &kp MINUS &kp PLUS  &kp LBKT  &kp RBKT  &none
+        &none     &none     &kp PG_DN &kp PG_UP &none     &kp TILDE                               &trans    &trans                                &kp PIPE  &kp UNDER &kp EQUAL &kp LBRC  &kp RBRC  &none
+        &none     &none     &none     &none     &none                       &trans      &trans    &trans    &trans    &trans    &trans                      &none     &none     &none     &none     &none
       >;
     };
     mod {
@@ -51,15 +50,6 @@
         &none &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none &none &none
         &none &none        &none        &none        &none        &none                                      &none &none                                                        &none        &none        &none        &none &none &none
         &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
-      >;
-    };
-    layer2 {
-      bindings = <
-        &none     &none     &none     &none     &none     &none      &none                                                              &none     &none     &none     &none     &none     &none     &none
-        &none     &none     &none     &none     &none     &none      &none                                                              &none     &none     &none     &none     &none     &none     &none
-        &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp GRAVE  &none              &trans    &trans    &trans    &trans            &none     &kp BSLH  &kp MINUS &kp PLUS  &kp LBKT  &kp RBKT  &none
-        &none     &none     &kp PG_DN &kp PG_UP &none     &kp TILDE                               &trans    &trans                                &kp PIPE  &kp UNDER &kp EQUAL &kp LBRC  &kp RBRC  &none
-        &none     &none     &none     &none     &none                       &trans      &trans    &trans    &trans    &trans    &trans                      &none     &none     &none     &none     &none
       >;
     };
   };
